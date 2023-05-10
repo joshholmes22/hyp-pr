@@ -30,31 +30,31 @@ function Reviews() {
 
     return (
       <div
-        className={`flex flex-col md:flex-row justify-center items-center bg-black p-10 rounded-xl w-full max-w-3xl ${
+        className={`flex flex-col md:flex-row justify-center items-center bg-black text-white p-10 rounded-xl w-full max-w-3xl ${
           isReverseOrder ? "md:flex-row-reverse" : ""
-        } shadow-lg`}
+        } shadow-lg transition-transform transform hover:scale-105`}
       >
         <Image
           src={image}
           alt={title}
           height={400}
           width={400}
-          className="rounded-xl border-2 border-white"
+          className="rounded-xl border-4 border-gray-300 my-5 md:my-0"
         />
         <div
           className={`flex flex-col pt-3 ${
             isReverseOrder ? "md:pr-10" : "md:pl-10"
           }`}
         >
-          <p className="text-lg">"{description}"</p>
-          <h3 className="text-3xl pt-3">{title}</h3>
+          <p className="text-lg">{description}</p>
+          <h3 className="text-3xl pt-3 font-bold">{title}</h3>
         </div>
       </div>
     );
   };
 
   return (
-    <div className="text-center md:text-left bg-white">
+    <div className="text-center md:text-left bg-white" id="reviews">
       <h2 className="text-4xl md:pl-8 pt-3 text-black">Reviews</h2>
       <section className="flex justify-between p-10 gap-10 flex-col items-center">
         {reviews.map((review, index) => (

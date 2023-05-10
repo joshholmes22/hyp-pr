@@ -4,7 +4,7 @@ import intro from "../../public/images/intro-placeholder.svg";
 function Header() {
   return (
     <header>
-      <h2 className="text-3xl text-center">
+      <h2 className="text-3xl text-center text-white">
         WE HELP ARTISTS TO GROW A{" "}
         <span className="inline-block hover:scale-125 transition duration-500 ease-in-out">
           REAL

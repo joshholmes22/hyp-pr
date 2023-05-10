@@ -27,23 +27,30 @@ function Services() {
 
   const ServiceCard = ({ title, image, description }) => {
     return (
-      <div className="bg-white text-black text-center rounded-xl w-full max-w-sm">
-        <div className="font-bold text-lg pt-3">{title}</div>
+      <div className="bg-gray-100 text-gray-900 text-center rounded-xl w-full max-w-sm shadow-lg transition-transform transform hover:scale-105">
+        <div className="font-bold text-xl pt-5">{title}</div>
         <div className="flex justify-center">
-          <Image src={image} alt="Social Logo" width={200} height={100} />
+          <Image
+            src={image}
+            alt="Social Logo"
+            width={200}
+            height={100}
+            className="my-5"
+          />
         </div>
-        <div className="p-5">{description}</div>
+        <div className="px-5 py-8">{description}</div>
       </div>
     );
   };
 
   return (
-    <div className="text-center md:text-left">
-      <h2 className="text-4xl md:pl-8 pt-3">Services</h2>
+    <div className="text-center md:text-left" id="services">
+      <h2 className="text-4xl md:pl-8 pt-3 text-white">Services</h2>
       {/* Ads Campaigns Card */}
       <section className="flex justify-between p-10 gap-10 flex-col md:flex-row">
         {services.map((service) => (
           <ServiceCard
+            key={service.title}
             title={service.title}
             image={service.image}
             description={service.description}

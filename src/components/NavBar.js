@@ -8,7 +8,7 @@ function NavBar() {
     return (
       <div className="hover:underline hover:underline-offset-8 transition-all duration-500 ease-in-out">
         <a href={href}>
-          <span className="text-lg">{children}</span>
+          <span className="text-lg text-white">{children}</span>
         </a>
       </div>
     );
@@ -34,7 +34,7 @@ function NavBar() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
+            className="h-8 w-8 text-white"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -67,19 +67,19 @@ function NavBar() {
         } md:hidden flex-col gap-4 text-xl text-center pt-5`}
       >
         <NavLink href="#">HOME</NavLink>
-        <NavLink href="#">SERVICES</NavLink>
-        <NavLink href="#">REVIEWS</NavLink>
-        <NavLink href="#">OUR WORK</NavLink>
-        <NavLink href="#">CONTACT US</NavLink>
+        <NavLink href="#services">SERVICES</NavLink>
+        <NavLink href="#reviews">REVIEWS</NavLink>
+        <NavLink href="#work">OUR WORK</NavLink>
+        <NavLink href="#contact">CONTACT US</NavLink>
       </div>
 
       {/* This is the desktop version of the navbar */}
       <div className="hidden md:flex gap-7 text-xl pt-5">
         <NavLink href="#">HOME</NavLink>
-        <NavLink href="#">SERVICES</NavLink>
-        <NavLink href="#">REVIEWS</NavLink>
-        <NavLink href="#">OUR WORK</NavLink>
-        <NavLink href="#">CONTACT US</NavLink>
+        <NavLink href="#services">SERVICES</NavLink>
+        <NavLink href="#reviews">REVIEWS</NavLink>
+        <NavLink href="#work">OUR WORK</NavLink>
+        <NavLink href="#contact">CONTACT US</NavLink>
       </div>
     </div>
   );
