@@ -19,7 +19,7 @@ function NavBar() {
       <div className="flex content-center">
         <div className="cursor-pointer">
           <Image
-            src="/images/hypprLogo.png"
+            src="/images/Hyp-PR-logo.svg"
             alt="My logo"
             width={200}
             height={100}

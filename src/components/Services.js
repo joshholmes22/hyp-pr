@@ -45,7 +45,7 @@ function Services() {
 
   return (
     <div className="text-center md:text-left" id="services">
-      <h2 className="text-4xl md:pl-8 pt-3 text-white">Services</h2>
+      <h2 className="text-5xl pt-3 text-white text-center">Services</h2>
       {/* Ads Campaigns Card */}
       <section className="flex justify-between p-10 gap-10 flex-col md:flex-row">
         {services.map((service) => (

@@ -3,7 +3,7 @@ import intro from "../../public/images/intro-placeholder.svg";
 
 function Header() {
   return (
-    <header>
+    <header className="h-screen flex flex-col justify-center items-center bg-custom-background">
       <h2 className="text-3xl text-center text-white">
         WE HELP ARTISTS TO GROW A{" "}
         <span className="inline-block hover:scale-125 transition duration-500 ease-in-out">
@@ -11,7 +11,7 @@ function Header() {
         </span>{" "}
         FANBASE
       </h2>
-      <div className="flex md:justify-center pt-5">
+      <div className="flex justify-center pt-5">
         <Image src={intro} alt="Introduction Video" width={850} height={850} />
       </div>
     </header>
