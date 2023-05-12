@@ -6,8 +6,10 @@ function Booking() {
       className="flex flex-col items-center md:items-start px-3"
       id="contact"
     >
-      <h2 className="text-white text-4xl md:pl-8 pt-3">Contact Us</h2>
-      <p className="text-white text-lg pt-4 pb-3 md:pl-8">
+      <h2 className="text-5xl pt-3 text-white text-center mx-auto">
+        Contact Us
+      </h2>
+      <p className="text-white text-lg pt-4 pb-3 md:pl-8 text-center mx-auto">
         If you have any questions or would like to learn more about our
         services, you can get in touch via our email{" "}
         <a href="mailto:ryan@hyp-pr.com" className="underline">

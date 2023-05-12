@@ -55,7 +55,7 @@ function Reviews() {
 
   return (
     <div className="text-center md:text-left bg-white" id="reviews">
-      <h2 className="text-4xl md:pl-8 pt-3 text-black">Reviews</h2>
+      <h2 className="text-5xl pt-3 text-black text-center">Reviews</h2>
       <section className="flex justify-between p-10 gap-10 flex-col items-center">
         {reviews.map((review, index) => (
           <ReviewCard

@@ -8,7 +8,6 @@ import Booking from "@/components/Booking";
 function HomePage() {
   return (
     <div className="bg-custom-background">
-      <NavBar />
       <Header />
       <Services />
       <Reviews />
