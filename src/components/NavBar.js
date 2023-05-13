@@ -6,9 +6,9 @@ function NavBar() {
 
   const NavLink = ({ children, href }) => {
     return (
-      <div className="hover:underline hover:underline-offset-8 transition-all duration-500 ease-in-out">
+      <div className="border-b border-transparent hover:border-current transition-all duration-500 ease-out hover:border-custom-white">
         <a href={href}>
-          <span className="text-lg text-white">{children}</span>
+          <span className="text-lg text-custom-white">{children}</span>
         </a>
       </div>
     );
@@ -34,7 +34,7 @@ function NavBar() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-white"
+            className="h-8 w-8 text-custom-white"
             viewBox="0 0 20 20"
             fill="currentColor"
           >

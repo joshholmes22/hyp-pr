@@ -5,7 +5,8 @@ module.exports = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        "custom-background": "#252525",
+        "custom-black": "#1D1D1F",
+        "custom-white": "#F5F5F7",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

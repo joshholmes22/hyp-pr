@@ -30,9 +30,9 @@ function Reviews() {
 
     return (
       <div
-        className={`flex flex-col md:flex-row justify-center items-center bg-black text-white p-10 rounded-xl w-full max-w-3xl ${
+        className={`flex flex-col md:flex-row justify-center items-center bg-custom-black text-custom-white p-10 rounded-xl w-full max-w-3xl ${
           isReverseOrder ? "md:flex-row-reverse" : ""
-        } shadow-lg transition-transform transform hover:scale-105`}
+        } shadow-lg transition-transform transform hover:scale-105 ease-in-out duration-500`}
       >
         <Image
           src={image}
@@ -54,8 +54,8 @@ function Reviews() {
   };
 
   return (
-    <div className="text-center md:text-left bg-white" id="reviews">
-      <h2 className="text-5xl pt-3 text-black text-center">Reviews</h2>
+    <div className="text-center md:text-left bg-custom-white" id="reviews">
+      <h2 className="text-5xl pt-3 text-custom-black text-center">Reviews</h2>
       <section className="flex justify-between p-10 gap-10 flex-col items-center">
         {reviews.map((review, index) => (
           <ReviewCard
