@@ -29,3 +29,14 @@ body {
 .white-underline {
   text-decoration-color: "#F5F5F7";
 }
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}

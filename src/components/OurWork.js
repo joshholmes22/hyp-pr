@@ -4,8 +4,17 @@ import TempArtwork2 from "../../public/images/TempArtwork2.svg";
 import TempArtwork3 from "../../public/images/TempArtwork3.svg";
 import TempArtwork4 from "../../public/images/TempArtwork4.svg";
 import TempResults from "../../public/images/TempResults1.svg";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 function OurWork() {
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, containScroll: "trimSnaps" },
+    [Autoplay()]
+  );
+
+  const EmptySlide = () => <div className="embla_slide w-10 max-w-sm" />;
+
   const works = [
     {
       id: 1,
@@ -56,6 +65,102 @@ function OurWork() {
       ],
       image: TempResults,
     },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
+    {
+      id: 4,
+      artist: "Neela",
+      artwork: TempArtwork4,
+      objective: "Increase Spotify streams",
+      strategy: "Social media ads",
+      result: [
+        "Triggered algorithmic playlists",
+        "Added to Spotify Editorial playlist",
+      ],
+      image: TempResults,
+    },
   ];
 
   const WorkCard = ({
@@ -67,7 +172,11 @@ function OurWork() {
     image,
   }) => {
     return (
-      <div className="bg-custom-white text-custom-black text-center rounded-xl w-full max-w-sm shadow-lg transition-transform transform hover:scale-105 ease-in-out duration-500">
+      <div
+        className={
+          "bg-custom-white text-custom-black text-center rounded-xl w-80 min-w-[21rem] max-w-sm shadow-lg"
+        }
+      >
         <div className="flex justify-center">
           <Image
             src={artwork}
@@ -107,19 +216,24 @@ function OurWork() {
 
   return (
     <div>
-      <h2 className="text-5xl pt-3 text-custom-white text-center">Our Work</h2>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10">
-        {works.map((work) => (
-          <WorkCard
-            key={work.id}
-            artist={work.artist}
-            artwork={work.artwork}
-            objective={work.objective}
-            strategy={work.strategy}
-            result={work.result}
-            image={work.image}
-          />
-        ))}
+      <h2 className="text-5xl pt-3 text-custom-white text-center pb-5">
+        Our Work
+      </h2>
+      <section className="embla" ref={emblaRef}>
+        <div className="embla__container flex gap-10">
+          <EmptySlide />
+          {works.map((work) => (
+            <WorkCard
+              key={work.id}
+              artist={work.artist}
+              artwork={work.artwork}
+              objective={work.objective}
+              strategy={work.strategy}
+              result={work.result}
+              image={work.image}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );

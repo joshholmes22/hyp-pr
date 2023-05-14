@@ -2,8 +2,17 @@ import Image from "next/image";
 import reviewImage1 from "../../public/images/review1.svg";
 import reviewImage2 from "../../public/images/review2.svg";
 import reviewImage3 from "../../public/images/review3.svg";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 function Reviews() {
+  const [emblaRefReview] = useEmblaCarousel(
+    { loop: true, containScroll: "trimSnaps" },
+    [Autoplay()]
+  );
+
+  const EmptySlide = () => <div className="embla_slide w-10 max-w-sm" />;
+
   const reviews = [
     {
       title: "Robbie Hutton",
@@ -23,6 +32,36 @@ function Reviews() {
       description:
         "It was such an awesome experience working with you. It was super helpful and we’re definitely going to recommend you to anyone else who needs these services",
     },
+    {
+      title: "Crooked Shepherd",
+      image: reviewImage3,
+      description:
+        "It was such an awesome experience working with you. It was super helpful and we’re definitely going to recommend you to anyone else who needs these services",
+    },
+    {
+      title: "Crooked Shepherd",
+      image: reviewImage3,
+      description:
+        "It was such an awesome experience working with you. It was super helpful and we’re definitely going to recommend you to anyone else who needs these services",
+    },
+    {
+      title: "Crooked Shepherd",
+      image: reviewImage3,
+      description:
+        "It was such an awesome experience working with you. It was super helpful and we’re definitely going to recommend you to anyone else who needs these services",
+    },
+    {
+      title: "Crooked Shepherd",
+      image: reviewImage3,
+      description:
+        "It was such an awesome experience working with you. It was super helpful and we’re definitely going to recommend you to anyone else who needs these services",
+    },
+    {
+      title: "Crooked Shepherd",
+      image: reviewImage3,
+      description:
+        "It was such an awesome experience working with you. It was super helpful and we’re definitely going to recommend you to anyone else who needs these services",
+    },
   ];
 
   const ReviewCard = ({ title, image, description, index }) => {
@@ -30,9 +69,9 @@ function Reviews() {
 
     return (
       <div
-        className={`flex flex-col md:flex-row justify-center items-center bg-custom-black text-custom-white p-10 rounded-xl w-full max-w-3xl ${
+        className={`flex flex-col md:flex-row justify-center items-center bg-custom-black text-custom-white p-10 rounded-xl embla__slide w-full max-w-3xl ${
           isReverseOrder ? "md:flex-row-reverse" : ""
-        } shadow-lg transition-transform transform hover:scale-105 ease-in-out duration-500`}
+        } shadow-lg`}
       >
         <Image
           src={image}
@@ -56,16 +95,22 @@ function Reviews() {
   return (
     <div className="text-center md:text-left bg-custom-white" id="reviews">
       <h2 className="text-5xl pt-3 text-custom-black text-center">Reviews</h2>
-      <section className="flex justify-between p-10 gap-10 flex-col items-center">
-        {reviews.map((review, index) => (
-          <ReviewCard
-            key={index}
-            title={review.title}
-            image={review.image}
-            description={review.description}
-            index={index}
-          />
-        ))}
+      <section
+        className="flex justify-between p-10 gap-10 flex-col items-center embla"
+        ref={emblaRefReview}
+      >
+        <div className="embla__container flex gap-10">
+          <EmptySlide />
+          {reviews.map((review, index) => (
+            <ReviewCard
+              key={index}
+              title={review.title}
+              image={review.image}
+              description={review.description}
+              index={index}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );
