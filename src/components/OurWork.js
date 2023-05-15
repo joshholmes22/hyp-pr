@@ -215,7 +215,7 @@ function OurWork() {
   };
 
   return (
-    <div>
+    <div id="work">
       <h2 className="text-5xl pt-3 text-custom-white text-center pb-5">
         Our Work
       </h2>
