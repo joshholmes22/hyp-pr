@@ -15,7 +15,7 @@ function Booking() {
         <a href="mailto:ryan@hyp-pr.com" className="underline">
           ryan@hyp-pr.com
         </a>{" "}
-        or book in a free 30 minute consultation call from the calendal link
+        or book in a free 30 minute consultation call from the Calendly link
         below:
       </p>
       <Script

@@ -1,10 +1,4 @@
 import Image from "next/image";
-import TempArtwork1 from "../../public/images/TempArtwork1.svg";
-import TempArtwork2 from "../../public/images/TempArtwork2.svg";
-import TempArtwork3 from "../../public/images/TempArtwork3.svg";
-import TempArtwork4 from "../../public/images/TempArtwork4.svg";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 
 function OurWork() {
   const works = [
