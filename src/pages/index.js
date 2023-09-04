@@ -13,7 +13,9 @@ function HomePage() {
   return (
     <div className="bg-custom-black">
       <Header servicesRef={servicesRef} />
-      <Services ref={servicesRef} />
+      <div className="mt-10">
+        <Services ref={servicesRef} />
+      </div>
       <Reviews />
       <OurWork />
       <Booking />
