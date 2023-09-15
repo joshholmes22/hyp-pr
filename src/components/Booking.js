@@ -24,7 +24,7 @@ function Booking() {
       />
       <div
         className="calendly-inline-widget w-full" // Set width to 100%
-        data-url="https://calendly.com/hyppr/60-minute-meeting-with-ryan"
+        data-url="https://calendly.com/hyppr/free-consultation"
         style={{ height: "850px" }} // Removed minWidth
       />
     </div>
