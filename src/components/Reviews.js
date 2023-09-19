@@ -47,10 +47,11 @@ function Reviews() {
 
   const itemsToShow = showMore ? reviews.length : 2;
 
-  const ReviewCard = ({ title, video }) => {
+  const ReviewCard = ({ title, video, quote }) => {
     return (
       <div className="flex flex-col justify-center items-center bg-custom-black text-custom-white p-5 rounded-xl md:w-2/3 mx-auto mb-5 shadow-lg">
         <h3 className="text-3xl font-bold mb-3">{title}</h3>
+        <p className="text-xl mb-3 text-center">"{quote}"</p>
         <video
           width="250"
           controls
@@ -72,7 +73,12 @@ function Reviews() {
         Testimonials
       </h2>
       {reviews.slice(0, itemsToShow).map((review, index) => (
-        <ReviewCard key={index} title={review.title} video={review.video} />
+        <ReviewCard
+          key={index}
+          title={review.title}
+          video={review.video}
+          quote={review.quote}
+        />
       ))}
 
       {!showMore && (
