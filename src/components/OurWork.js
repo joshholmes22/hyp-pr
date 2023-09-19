@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { useState } from "react";
 
 function OurWork() {
+  const [showMore, setShowMore] = useState(false);
+
   const works = [
     {
       id: 1,
@@ -52,7 +55,22 @@ function OurWork() {
       ],
       image: "https://d3g56pywmp84r0.cloudfront.net/Our_Work_Neela.png",
     },
+    // {
+    //   id: 5,
+    //   artist: "Arielle Eden",
+    //   artwork: "https://d3g56pywmp84r0.cloudfront.net/video_Neela.mp4",
+    //   objective: "Growth Campaign",
+    //   strategy: "Ads, PR and Spotify",
+    //   result: [
+    //     "Over 1400 followers gained on own artist Spotify playlist",
+    //     "Triggered Algorithmic playlists",
+    //     "Achieved over 120000 streams on Spotify",
+    //   ],
+    //   image: "https://d3g56pywmp84r0.cloudfront.net/Our_Work_Arielle_Eden.png",
+    // },
   ];
+
+  const itemsToShow = showMore ? works.length : 2;
 
   const WorkCard = ({
     artist,
@@ -106,7 +124,7 @@ function OurWork() {
         Our Work
       </h2>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {works.map((work) => (
+        {works.slice(0, itemsToShow).map((work) => (
           <WorkCard
             key={work.id}
             artist={work.artist}
@@ -118,6 +136,16 @@ function OurWork() {
           />
         ))}
       </div>
+      {!showMore && (
+        <div className="flex justify-center mt-5">
+          <button
+            onClick={() => setShowMore(true)}
+            className="bg-custom-white text-custom-black py-2 px-6 rounded-full hover:bg-gray-700 transition-colors duration-300"
+          >
+            Show More
+          </button>
+        </div>
+      )}
     </div>
   );
 }

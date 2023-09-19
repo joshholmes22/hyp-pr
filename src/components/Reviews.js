@@ -51,7 +51,7 @@ function Reviews() {
     return (
       <div className="flex flex-col justify-center items-center bg-custom-black text-custom-white p-5 rounded-xl md:w-2/3 mx-auto mb-5 shadow-lg">
         <h3 className="text-3xl font-bold mb-3">{title}</h3>
-        <p className="text-xl mb-3 text-center">"{quote}"</p>
+        <p className="text-xl mb-3 text-center">&quot;{quote}&quot;</p>
         <video
           width="250"
           controls
